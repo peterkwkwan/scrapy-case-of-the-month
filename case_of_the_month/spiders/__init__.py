@@ -18,11 +18,7 @@ recipients = os.environ.get("RECIPIENTS")
 
 class WatchNewCasesSpider(scrapy.Spider):
     name = 'cases'
-
-    def start_requests(self):
-        urls = ['https://www.collegept.org/case-of-the-month']
-        for url in urls:
-            yield scrapy.Request(url=url, callback=self.parse)
+    start_urls = ['https://www.collegept.org/case-of-the-month']
     # user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:98.0) Gecko/20100101 Firefox/98.0'
     # allowed_domains = ['www.collegept.org']
 
