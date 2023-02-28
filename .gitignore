@@ -1,1 +1,7 @@
 .env
+setup.py
+twistd.pid
+/build
+/dbs
+/eggs
+/project.egg-info
